@@ -1,10 +1,11 @@
 import React from 'react';
-import { reduxForm } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
+
 
 class ToDoForm extends React.Component {
   addTask = (values) => {
-    console.log(values);
-    this.props.addTask({ task: values })
+    this.props.addTask({ text: values.text });
+    this.props.reset();
   };
   render(){
     return <form action="" className="form-inline" onSubmit={ this.props.handleSubmit(this.addTask)}>
