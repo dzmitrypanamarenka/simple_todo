@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-// import { Router } from 'react-router';
 import { Router, Route } from 'react-router-dom';
 import browserHistory from 'history/createBrowserHistory'
 import reducers from './reducers/index';

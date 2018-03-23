@@ -8,7 +8,7 @@ start:
 	npm run start
 
 serve:
-	npm run serve
+	npm run dev-serv
 
 
 
