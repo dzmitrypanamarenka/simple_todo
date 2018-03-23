@@ -5,18 +5,24 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel",
+    "babel-node": "babel-node",
     "webpack": "webpack",
-    "start": "webpack-dev-server",
-    "build": "rm -rf dist && babel src --out-dir dist --ignore init.jsx --source-maps inline && webpack"
+    "dev-serv": "webpack-dev-server",
+    "start": "babel-node dist/server",
+    "build": "babel src --out-dir dist --ignore index.jsx --source-maps inline"
   },
   "author": "me",
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
+    "consolidate": "^0.15.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",

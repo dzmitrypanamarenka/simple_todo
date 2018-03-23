@@ -17,14 +17,8 @@ const todos = handleActions({
     return { ...state, [id]: task};
   }
 }, {});
-// const filter = handleActions({
-//   [actions.applyFilter](state, { payload: { filter } }){
-//     return filter;
-//   }
-// }, 'all');
 
 export default combineReducers({
   todos,
-  // filter,
   form: formReducer
 })

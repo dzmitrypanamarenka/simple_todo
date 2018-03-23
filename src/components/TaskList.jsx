@@ -13,10 +13,10 @@ export default class TaskList extends React.Component{
     if(!col.length){
       return null;
     }
-    // const filter = this.props.filter;
-    // const filteredCol = filter === 'all' ? col : col.filter((el) => el.status === filter);
+    const filter = this.props.filter;
+    const filteredCol = filter === 'all' ? col : col.filter((el) => el.status === filter);
     return <ul className="list">
-      { col.map((el) => {
+      { filteredCol.map((el) => {
         const statusStyle = {
           cursor: 'pointer',
           textDecoration: el.status === 'active' ? 'none' : 'line-through'

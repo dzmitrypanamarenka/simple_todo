@@ -3,7 +3,6 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default () => ({
-  // context: path.join(__dirname, 'src'),
   mode: 'development',
   entry: {
     index: path.join(__dirname, 'src', 'index'),
@@ -12,7 +11,6 @@ export default () => ({
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
   },
-  // content: path.join(__dirname, 'dist', 'index'),
   module: {
     rules: [
       {
@@ -39,13 +37,9 @@ export default () => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'src/index.html',
     })],
   resolve: {
     extensions: [".js", ".jsx"]
   }
-  // watch: true,
-  // watchOptions: {
-  //     aggregateTimeout: 100
-  // },
 });
